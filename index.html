@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pranish Shiwakoti — Portfolio & Gaming Zone</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="space">
+
+  <!-- Particle & Scene Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Clean Navigation Header -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-accent">&lt;</span>Pranish<span class="logo-accent">/&gt;</span>
+      </a>
+
+      <!-- Clean Navigation Tabs -->
+      <nav class="nav-links" id="nav-links">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#about" class="nav-link">Skills</a>
+        <a href="#arcade" class="nav-link nav-highlight"><i class="fa-solid fa-gamepad"></i> Gaming Zone</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Hover Theme Switcher Dropdown -->
+        <div class="theme-dropdown-wrap" id="theme-dropdown-wrap">
+          <button class="theme-main-btn" id="theme-main-btn" aria-label="Change Theme">
+            <i class="fa-solid fa-palette"></i> <span id="theme-current-text">Space</span>
+          </button>
+          <div class="theme-options-menu">
+            <button class="theme-option-btn active" data-theme-set="space" title="Cyber Space Theme">🌌 Space</button>
+            <button class="theme-option-btn" data-theme-set="egypt" title="Ancient Egyptian Theme">🏺 Egypt</button>
+            <button class="theme-option-btn" data-theme-set="cyberpunk" title="Neon Cyberpunk Theme">⚡ Neon</button>
+          </div>
+        </div>
+
+        <a href="#arcade" class="btn btn-primary btn-sm"><i class="fa-solid fa-play"></i> Play Games</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <div class="badge animate-in">
+          <span class="pulse-dot"></span> Welcome to my portfolio
+        </div>
+        <h1 class="hero-title animate-in delay-1">
+          Hi, I'm <span class="text-gradient">Pranish Shiwakoti</span>
+        </h1>
+        <p class="hero-subtitle animate-in delay-2">
+          Full-Stack Web & App Developer, Video Editor, Graphic Designer, and Tech Consultant. I build digital solutions and interactive web experiences.
+        </p>
+
+        <div class="hero-buttons animate-in delay-3">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fa-solid fa-code"></i>
+            <span>View My Projects</span>
+          </a>
+          <a href="#arcade" class="btn btn-secondary">
+            <span>Play Games</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="social-pills animate-in delay-4">
+          <span class="social-label">Links:</span>
+          <a href="https://www.instagram.com/pranishh90/?hl=en" target="_blank" rel="noopener noreferrer" class="social-pill" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="mailto:pranishsiwakoti13@gmail.com" class="social-pill" title="Email Direct">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-card-wrap animate-in delay-2">
+        <div class="glass-card hero-card">
+          <div class="card-header">
+            <div class="window-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="card-title">pranish_shiwakoti.config</div>
+          </div>
+          <div class="card-body terminal-body">
+            <div class="line"><span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">const</span> <span class="cmd-var">profile</span> = {</div>
+            <div class="line indent"><span class="cmd-key">name:</span> <span class="cmd-str">'Pranish Shiwakoti'</span>,</div>
+            <div class="line indent"><span class="cmd-key">role:</span> <span class="cmd-str">'Developer & Creator'</span>,</div>
+            <div class="line indent"><span class="cmd-key">skills:</span> [<span class="cmd-str">'Full-Stack'</span>, <span class="cmd-str">'Editing'</span>, <span class="cmd-str">'Design'</span>],</div>
+            <div class="line indent"><span class="cmd-key">status:</span> <span class="cmd-bool">true</span></div>
+            <div class="line">};</div>
+            <div class="line"><span class="cmd-prompt">&gt;</span> <span class="cmd-var">profile</span>.launch();</div>
+            <div class="line"><span class="cmd-success">&gt; [OK] System fully operational!</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFORMATIVE QUICK STATS & ABOUT BANNER -->
+  <section class="utility-section">
+    <div class="container">
+      <div class="glass-card utility-box">
+        <div class="info-snapshot-item">
+          <i class="fa-solid fa-rocket tool-icon"></i>
+          <div>
+            <h4>Fast & Responsive</h4>
+            <p>Clean code architecture ensuring high performance across devices.</p>
+          </div>
+        </div>
+        <div class="info-snapshot-item">
+          <i class="fa-solid fa-pen-nib tool-icon"></i>
+          <div>
+            <h4>Creative Branding</h4>
+            <p>Skilled in video editing, high-CTR thumbnails & Canva visuals.</p>
+          </div>
+        </div>
+        <div class="info-snapshot-item">
+          <i class="fa-solid fa-headset tool-icon"></i>
+          <div>
+            <h4>Tech Consultancy</h4>
+            <p>Providing expert software guidance and computer troubleshooting.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAST PROJECTS SHOWCASE SECTION -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stage-tag">PORTFOLIO WORK</span>
+        <h2 class="section-title">Past Projects & Creations</h2>
+        <p class="section-subtitle">Here are some of the professional projects, web tools, and design suites I have crafted.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="glass-card project-card">
+          <div class="project-thumb"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="project-content">
+            <div class="project-tags"><span class="tag">Full-Stack</span><span class="tag">Node.js</span></div>
+            <h3 class="project-title">Tech Metrics & Analytics Dashboard</h3>
+            <p class="project-desc">A comprehensive system performance dashboard built to track hardware metrics, CPU usage, and user statistics in real-time.</p>
+            <button class="btn btn-sm btn-outline modal-trigger" data-modal="0">View Details</button>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="glass-card project-card">
+          <div class="project-thumb"><i class="fa-solid fa-photo-film"></i></div>
+          <div class="project-content">
+            <div class="project-tags"><span class="tag">Video Production</span><span class="tag">UI/UX</span></div>
+            <h3 class="project-title">Media Editing & Thumbnail Suite</h3>
+            <p class="project-desc">Professional video editing works and high-impact custom thumbnail designs crafted to boost viewer retention and channel engagement.</p>
+            <button class="btn btn-sm btn-outline modal-trigger" data-modal="1">View Details</button>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="glass-card project-card">
+          <div class="project-thumb"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <div class="project-content">
+            <div class="project-tags"><span class="tag">Canva Branding</span><span class="tag">Graphics</span></div>
+            <h3 class="project-title">Brand Identity & Marketing Visuals</h3>
+            <p class="project-desc">Custom promotional posters, business presentations, and cohesive brand design assets created cleanly using design workflows.</p>
+            <button class="btn btn-sm btn-outline modal-trigger" data-modal="2">View Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Services Section -->
+  <section id="about" class="section bg-dim">
+    <div class="container">
+      <div class="section-header">
+        <span class="stage-tag">WHAT I DO</span>
+        <h2 class="section-title">Skills & Professional Services</h2>
+        <p class="section-subtitle">Delivering high-quality technical and creative solutions.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="glass-card service-card">
+          <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <h3>Web Development</h3>
+          <p>Building responsive frontend interfaces and secure backend systems for fast, reliable web applications.</p>
+        </div>
+
+        <div class="glass-card service-card">
+          <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+          <h3>App Development</h3>
+          <p>Creating user-friendly mobile application layouts and features tailored for modern mobile devices.</p>
+        </div>
+
+        <div class="glass-card service-card">
+          <div class="service-icon"><i class="fa-solid fa-video"></i></div>
+          <h3>Video Editing</h3>
+          <p>Professional video cuts, color grading, sound design, and smooth motion graphics for engaging content.</p>
+        </div>
+
+        <div class="glass-card service-card">
+          <div class="service-icon"><i class="fa-solid fa-image"></i></div>
+          <h3>Photo & Thumbnail Design</h3>
+          <p>Eye-catching YouTube thumbnails, social media banners, and photo touch-ups that grab attention.</p>
+        </div>
+
+        <div class="glass-card service-card">
+          <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
+          <h3>Canva & Graphic Works</h3>
+          <p>Custom graphic designs, posters, presentations, and visual branding assets crafted neatly on Canva.</p>
+        </div>
+
+        <div class="glass-card service-card">
+          <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+          <h3>Tech Consultancy</h3>
+          <p>Expert computer consultancy, software advice, troubleshooting, and digital workflow guidance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAMING ZONE / ARCADE SECTION -->
+  <section id="arcade" class="section arcade-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stage-tag">ARCADE ZONE</span>
+        <h2 class="section-title"><i class="fa-solid fa-gamepad text-gradient"></i> Interactive Gaming Zone</h2>
+        <p class="section-subtitle">Play 3 relaxed, easy-to-control arcade games with a 3-2-1 countdown!</p>
+      </div>
+
+      <div class="arcade-container glass-card">
+        <!-- Game Switcher Tabs -->
+        <div class="game-tabs">
+          <button class="game-tab active" data-game="racer">🏎️ Speed Racer</button>
+          <button class="game-tab" data-game="flappy">🐤 Flappy Cyber</button>
+          <button class="game-tab" data-game="shooter">🚀 Space Defender</button>
+        </div>
+
+        <!-- Scoreboard -->
+        <div class="arcade-screen-header">
+          <div class="game-title-badge" id="current-game-title">Speed Racer 2D</div>
+          <div class="game-score-board">SCORE: <span id="game-score">0</span> | BEST: <span id="game-highscore">0</span></div>
+        </div>
+
+        <!-- Game Canvas -->
+        <div class="canvas-wrapper">
+          <canvas id="arcade-canvas" width="600" height="400"></canvas>
+          <div class="game-overlay" id="game-overlay">
+            <h3 id="overlay-title">Ready to Play?</h3>
+            <p id="overlay-desc">Smooth and easy controls. Use Left/Right arrows or WASD to steer!</p>
+            <button class="btn btn-primary" id="start-game-btn"><i class="fa-solid fa-play"></i> START GAME</button>
+          </div>
+        </div>
+
+        <!-- Touch Controls -->
+        <div class="arcade-controls">
+          <div class="control-hints">
+            <span><i class="fa-solid fa-keyboard"></i> Controls: <kbd>←</kbd> <kbd>→</kbd> or <kbd>A</kbd> <kbd>D</kbd> | <kbd>SPACE</kbd> (Action)</span>
+          </div>
+          <div class="virtual-dpad">
+            <button class="v-btn" id="btn-left"><i class="fa-solid fa-arrow-left"></i> LEFT</button>
+            <button class="v-btn v-btn-action" id="btn-action"><i class="fa-solid fa-bolt"></i> ACTION / JUMP</button>
+            <button class="v-btn" id="btn-right">RIGHT <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section bg-dim">
+    <div class="container">
+      <div class="section-header">
+        <span class="stage-tag">GET IN TOUCH</span>
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-subtitle">Have a project, question, or need consultancy? Send me a message below!</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="glass-card info-card">
+            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <p>pranishsiwakoti13@gmail.com</p>
+              <button class="btn btn-sm btn-outline" id="copy-email-btn">Copy Email</button>
+            </div>
+          </div>
+
+          <div class="glass-card info-card">
+            <div class="info-icon"><i class="fa-brands fa-instagram"></i></div>
+            <div>
+              <h4>Instagram</h4>
+              <p>@pranishh90</p>
+              <a href="https://www.instagram.com/pranishh90/?hl=en" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">Visit Instagram</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card contact-form-card">
+          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms Key -->
+            <input type="hidden" name="access_key" value="393161a0-3798-42bb-9f35-73ad530aa0c5">
+            <input type="hidden" name="subject" value="New Message from Portfolio Website">
+
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="form-submit-btn">
+              <span>Send Message</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+            <div id="form-status" class="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; <span id="year"></span> Pranish Shiwakoti. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#hero">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Enhanced Interactive Project Modal Popup with Sandbox -->
+  <div class="modal" id="project-modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-content glass-card">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header-row">
+        <span class="tag" id="modal-tag">Web App</span>
+        <h3 id="modal-title" class="modal-title">Project Title</h3>
+      </div>
+      <div id="modal-body" class="modal-body">
+        <!-- Live sandbox preview loads here -->
+      </div>
+      <div class="modal-actions" id="modal-actions">
+        <!-- Action buttons load here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
